@@ -1,19 +1,57 @@
-window.onload = function () {
-
-    setTimeout(function () {
-
-        document.getElementById("loader").style.opacity = "0";
-        document.getElementById("loader").style.visibility = "hidden";
-
-    }, 2200);
-
-};
 window.addEventListener("load", () => {
+
     const loader = document.getElementById("loader");
+
 
     loader.style.opacity = "0";
 
+
     setTimeout(() => {
+
         loader.style.display = "none";
-    }, 800);
+
+    },800);
+
+
+});
+
+
+
+const sections = document.querySelectorAll("section");
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+
+});
+
+
+});
+
+
+
+sections.forEach(section=>{
+
+section.style.opacity="0";
+
+section.style.transform="translateY(30px)";
+
+section.style.transition="1s";
+
+
+observer.observe(section);
+
+
 });
