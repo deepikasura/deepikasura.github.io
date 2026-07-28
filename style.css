@@ -86,3 +86,19 @@ body{
 50%{transform:translateY(10px);}
 100%{transform:translateY(0);}
 }
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.gallery img {
+    width: 300px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
