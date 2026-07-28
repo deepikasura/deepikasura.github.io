@@ -1,7 +1,10 @@
-setTimeout(function(){
+window.onload = function () {
 
-document.getElementById("loader").style.opacity="0";
+    setTimeout(function () {
 
-document.getElementById("loader").style.visibility="hidden";
+        document.getElementById("loader").style.opacity = "0";
+        document.getElementById("loader").style.visibility = "hidden";
 
-},2200);
+    }, 2200);
+
+};
