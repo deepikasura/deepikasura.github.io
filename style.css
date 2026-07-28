@@ -1,225 +1,38 @@
-body{
-    margin:0;
-    background:#F5F0E6;
-    color:#556B4F;
-    font-family:Georgia,serif;
-    overflow-x:hidden;
-    scroll-behavior:smooth;
-    background-image:
-    radial-gradient(rgba(0,0,0,.03) 1px, transparent 1px);
-    background-size:20px 20px;
+* {
+    box-sizing: border-box;
 }
 
-#loader{
-    position:fixed;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:#F5F0E6;
-    transition:1s;
-    z-index:999;
-}
 
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px;
-}
-
-.hero h1{
-    font-size:70px;
-    margin-bottom:20px;
-    letter-spacing:3px;
-}
-
-.hero p{
-    font-size:22px;
-    line-height:1.8;
-}
-
-.scroll{
-    margin-top:70px;
-    animation:float 2s infinite;
-    font-size:15px;
-    letter-spacing:4px;
-}
-
-.quote{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:60px;
-    font-size:32px;
-    text-align:center;
-    line-height:1.8;
-    font-style:italic;
-}
-
-.photo{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-}
-
-.photo img{
-    width:80%;
-    max-width:700px;
-    border-radius:16px;
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
-}
-
-.caption{
-    margin-top:25px;
-    font-style:italic;
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(10px);}
-100%{transform:translateY(0);}
-}
-.gallery {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-}
-
-.gallery img {
-    width: 300px;
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
 body {
-    background: linear-gradient(135deg, #fdfbfb, #ebedee);
-    font-family: "Poppins", sans-serif;
+
     margin: 0;
-    padding: 0;
-}
-.gallery {
-    padding: 40px;
-    text-align: center;
-}
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-family: "Poppins", sans-serif;
+
+    background: linear-gradient(
+    -45deg,
+    #fff5f7,
+    #fdfbfb,
+    #e8f0ff,
+    #f8f1ff
+    );
+
+    background-size: 400% 400%;
+    animation: backgroundMove 15s ease infinite;
+
+    color: #333;
+
 }
 
-.hero p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    font-weight: 300;
-}
 
-.quote {
-    text-align: center;
-    font-size: 1.3rem;
-    font-style: italic;
-    padding: 50px 20px;
-    line-height: 1.8;
-}
 
-.caption {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 15px;
-}
-.music {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.music h2 {
-    font-size: 2rem;
-    letter-spacing: 2px;
-}
-
-.music p {
-    font-size: 1rem;
-    opacity: 0.7;
-    margin-bottom: 25px;
-}
-
-audio {
-    width: 300px;
-}
 html {
     scroll-behavior: smooth;
 }
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff;
-    z-index: 1000;
-}
 
-#loader h1 {
-    letter-spacing: 4px;
-}
 
-#loader p {
-    opacity: 0.6;
-}
-.photo img {
-    transition: transform 0.5s ease;
-}
 
-.photo img:hover {
-    transform: scale(1.05);
-}
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff;
-    z-index: 1000;
-}
+@keyframes backgroundMove {
 
-#loader h1 {
-    letter-spacing: 4px;
-    font-size: 3rem;
-}
-
-#loader p {
-    opacity: 0.6;
-    font-size: 1rem;
-}
-#loader {
-    transition: opacity 0.8s ease;
-}
-body {
-    background: linear-gradient(-45deg, #fdfbfb, #ebedee, #e8f0ff, #fff5f7);
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
-}
-
-@keyframes gradientMove {
     0% {
         background-position: 0% 50%;
     }
@@ -231,4 +44,248 @@ body {
     100% {
         background-position: 0% 50%;
     }
+
+}
+
+
+
+/* LOADER */
+
+#loader {
+
+    position: fixed;
+
+    height: 100vh;
+    width: 100%;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+    transition: opacity 0.8s ease;
+
+}
+
+
+#loader h1 {
+
+    letter-spacing: 5px;
+    font-size: 3rem;
+
+}
+
+
+#loader p {
+
+    opacity: .6;
+
+}
+
+
+
+/* HERO */
+
+.hero {
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size: 4rem;
+
+    letter-spacing: 5px;
+
+}
+
+
+
+.hero p {
+
+    font-size: 1.2rem;
+
+    font-weight: 300;
+
+    line-height: 2;
+
+}
+
+
+
+.scroll {
+
+    margin-top: 50px;
+
+    opacity: .6;
+
+}
+
+
+
+/* QUOTE */
+
+
+.quote {
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    font-size: 1.4rem;
+
+    font-style: italic;
+
+    line-height: 2;
+
+}
+
+
+
+/* PHOTO */
+
+
+.photo {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+
+}
+
+
+.photo-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+
+    transition: .4s;
+
+}
+
+
+
+.photo-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+.photo-card img {
+
+    width: 300px;
+
+    border-radius: 20px;
+
+}
+
+
+
+.photo-card p {
+
+    text-align: center;
+
+}
+
+
+
+/* MUSIC */
+
+
+.music {
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+
+
+.music h2 {
+
+    letter-spacing: 3px;
+
+}
+
+
+
+.music p {
+
+    opacity: .7;
+
+}
+
+
+
+audio {
+
+    width: 300px;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    text-align:center;
+
+    padding:30px;
+
+    opacity:.6;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:2.5rem;
+
+}
+
+
+.photo-card img{
+
+width:250px;
+
+}
+
 }
