@@ -183,3 +183,225 @@ footer {
     }
 
 }
+/* Dreamy Quote */
+
+.dreamy{
+    animation: fadeDream 2.5s ease;
+}
+
+.quote-text{
+    font-size:1.7rem;
+    line-height:2;
+    text-align:center;
+    font-style:italic;
+    color:#8B3E2F;
+    text-shadow:0 0 18px rgba(255,255,255,.35);
+    animation: float 5s ease-in-out infinite;
+}
+
+.footer-line{
+    margin-top:65px;
+    text-align:center;
+    font-style:italic;
+    font-size:1rem;
+    opacity:.9;
+    letter-spacing:.5px;
+}
+
+.music-note{
+    margin-top:22px;
+    text-align:center;
+    font-size:.9rem;
+    opacity:.7;
+    font-style:italic;
+}
+
+.photo-card{
+    animation:fadeUp .9s ease both;
+}
+
+.photo-card:nth-child(2){animation-delay:.15s;}
+.photo-card:nth-child(3){animation-delay:.3s;}
+.photo-card:nth-child(4){animation-delay:.45s;}
+.photo-card:nth-child(5){animation-delay:.6s;}
+
+@keyframes fadeDream{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* ===========================
+   DREAMY EFFECTS
+=========================== */
+
+/* Floating sparkles */
+
+.sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.sparkles span{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:rgba(255,255,255,.55);
+    animation:floatSparkle linear infinite;
+    box-shadow:0 0 12px rgba(255,255,255,.7);
+}
+
+.sparkles span:nth-child(1){left:8%;animation-duration:18s;animation-delay:0s;}
+.sparkles span:nth-child(2){left:18%;animation-duration:22s;animation-delay:3s;}
+.sparkles span:nth-child(3){left:28%;animation-duration:20s;animation-delay:6s;}
+.sparkles span:nth-child(4){left:40%;animation-duration:25s;animation-delay:2s;}
+.sparkles span:nth-child(5){left:52%;animation-duration:19s;animation-delay:5s;}
+.sparkles span:nth-child(6){left:65%;animation-duration:24s;animation-delay:7s;}
+.sparkles span:nth-child(7){left:74%;animation-duration:21s;animation-delay:4s;}
+.sparkles span:nth-child(8){left:84%;animation-duration:18s;animation-delay:8s;}
+.sparkles span:nth-child(9){left:92%;animation-duration:23s;animation-delay:1s;}
+.sparkles span:nth-child(10){left:97%;animation-duration:20s;animation-delay:6s;}
+
+@keyframes floatSparkle{
+    from{
+        transform:translateY(110vh) scale(.5);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    80%{
+        opacity:.8;
+    }
+
+    to{
+        transform:translateY(-15vh) scale(1.4);
+        opacity:0;
+    }
+}
+
+/* Soft glowing title */
+
+.hero h1{
+    animation:glow 4s ease-in-out infinite;
+}
+
+@keyframes glow{
+
+    0%,100%{
+        text-shadow:0 0 10px rgba(255,255,255,.2);
+    }
+
+    50%{
+        text-shadow:
+        0 0 18px rgba(255,255,255,.55),
+        0 0 35px rgba(255,255,255,.3);
+    }
+
+}
+
+/* Better photo hover */
+
+.photo-card{
+    transition:.4s ease;
+}
+
+.photo-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:
+    0 20px 45px rgba(80,40,40,.18),
+    0 0 30px rgba(255,255,255,.35);
+
+}
+
+/* Soft fade for entire page */
+
+body{
+
+    animation:pageFade 1.4s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* Romantic selection colour */
+
+::selection{
+
+    background:#d99cab;
+    color:white;
+
+}
+
+/* Nicer scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edd0d8;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#b66d7d;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#a85c6d;
+
+}
