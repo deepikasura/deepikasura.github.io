@@ -2,25 +2,12 @@
     box-sizing: border-box;
 }
 
-
 body {
-
     margin: 0;
-    font-family: "Poppins", sans-serif;
-
-    background: linear-gradient(
-    -45deg,
-    #fff5f7,
-    #fdfbfb,
-    #e8f0ff,
-    #f8f1ff
-    );
-
-    background-size: 400% 400%;
-    animation: backgroundMove 15s ease infinite;
-
-    color: #333;
-
+    padding: 20px;
+    background-color: #D8A7B1;
+    color: #A3472D;
+    font-family: Arial, sans-serif;
 }
 
 
