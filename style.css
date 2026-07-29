@@ -1,289 +1,160 @@
 * {
     box-sizing: border-box;
-}
-
-body {
     margin: 0;
-    padding: 20px;
-    background-color: #D8A7B1;
-    color: #A3472D;
-    font-family: Arial, sans-serif;
+    padding: 0;
 }
-
-
 
 html {
     scroll-behavior: smooth;
 }
 
-
-
-@keyframes backgroundMove {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-
+body {
+    background: #D8A7B1;
+    color: #A3472D;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
+/* Loader */
 
-
-/* LOADER */
-
-#loader {
-
-    position: fixed;
-
-    height: 100vh;
-    width: 100%;
-
-    background: white;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
-
-    transition: opacity 0.8s ease;
-
+#loader{
+    position:fixed;
+    inset:0;
+    background:#D8A7B1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:.8s;
 }
 
-
-#loader h1 {
-
-    letter-spacing: 5px;
-    font-size: 3rem;
-
+#loader h1{
+    font-size:3rem;
+    letter-spacing:6px;
 }
 
-
-#loader p {
-
-    opacity: .6;
-
+#loader p{
+    margin-top:15px;
+    opacity:.7;
 }
 
-
-
-/* HERO */
-
-.hero {
-
-    height: 100vh;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 20px;
-
-}
-
-
-
-.hero h1 {
-
-    font-size: 4rem;
-
-    letter-spacing: 5px;
-
-}
-
-
-
-.hero p {
-
-    font-size: 1.2rem;
-
-    font-weight: 300;
-
-    line-height: 2;
-
-}
-
-
-
-.scroll {
-
-    margin-top: 50px;
-
-    opacity: .6;
-
-}
-
-
-
-/* QUOTE */
-
-
-.quote {
-
-    text-align: center;
-
-    padding: 80px 20px;
-
-    font-size: 1.4rem;
-
-    font-style: italic;
-
-    line-height: 2;
-
-}
-
-
-
-/* PHOTO */
-
-
-.photo {
-
-    display: flex;
-
-    justify-content: center;
-
-    padding: 50px 20px;
-
-}
-
-
-.photo-card {
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 25px;
-
-    box-shadow: 0 15px 40px rgba(0,0,0,.15);
-
-    transition: .4s;
-
-}
-
-
-
-.photo-card:hover {
-
-    transform: translateY(-10px);
-
-}
-
-
-
-.photo-card img {
-
-    width: 300px;
-
-    border-radius: 20px;
-
-}
-
-
-
-.photo-card p {
-
-    text-align: center;
-
-}
-
-
-
-/* MUSIC */
-
-
-.music {
-
-    text-align: center;
-
-    padding: 80px 20px;
-
-}
-
-
-
-.music h2 {
-
-    letter-spacing: 3px;
-
-}
-
-
-
-.music p {
-
-    opacity: .7;
-
-}
-
-
-
-audio {
-
-    width: 300px;
-
-}
-
-
-
-/* FOOTER */
-
-
-footer {
-
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-
     padding:30px;
-
-    opacity:.6;
-
 }
-
-
-
-/* MOBILE */
-
-
-@media(max-width:600px){
 
 .hero h1{
-
-font-size:2.5rem;
-
+    font-size:4rem;
+    letter-spacing:5px;
 }
 
+.hero p{
+    margin-top:25px;
+    line-height:2;
+    font-size:1.1rem;
+}
+
+.scroll{
+    margin-top:60px;
+    opacity:.7;
+}
+
+/* Quote */
+
+.quote{
+    text-align:center;
+    padding:90px 25px;
+    font-size:1.4rem;
+    font-style:italic;
+    line-height:2;
+}
+
+/* Gallery */
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+    padding:60px 20px;
+}
+
+.photo-card{
+    background:#E9C8CF;
+    border-radius:25px;
+    padding:18px;
+    width:300px;
+    box-shadow:0 12px 30px rgba(80,40,40,.18);
+    transition:.35s;
+}
+
+.photo-card:hover{
+    transform:translateY(-10px);
+}
 
 .photo-card img{
-
-width:250px;
-
+    width:100%;
+    border-radius:18px;
 }
 
-}
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 60px 20px;
+.photo-card p{
+    text-align:center;
+    margin-top:15px;
+    color:#8B3E2F;
 }
 
-.gallery .photo-card {
-    width: 300px;
+/* Music */
+
+.music{
+    text-align:center;
+    padding:90px 20px;
+}
+
+.music h2{
+    letter-spacing:4px;
+    margin-bottom:15px;
+}
+
+.music p{
+    font-size:1.3rem;
+    margin-bottom:20px;
+}
+
+audio{
+    width:280px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#8B3E2F;
+    opacity:.85;
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.quote{
+    font-size:1.1rem;
+}
+
+.photo-card{
+    width:90%;
+}
+
 }
