@@ -158,3 +158,26 @@ footer{
 }
 
 }
+.quote {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+.footer-line {
+    margin-top: 70px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.music-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.75;
+    font-style: italic;
+}
