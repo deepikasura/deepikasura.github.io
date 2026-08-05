@@ -55,3 +55,36 @@ observer.observe(section);
 
 
 });
+const cards = document.querySelectorAll(".photo-card");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+cards.forEach(card => {
+    observer.observe(card);
+});
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function () {
+    music.volume = 0;
+    music.play();
+
+    let fade = setInterval(() => {
+        if (music.volume < 1) {
+            music.volume += 0.05;
+        } else {
+            clearInterval(fade);
+        }
+    }, 200);
+}, { once: true });
+const cards = document.querySelectorAll(".photo-card");
+
+cards.forEach(card => {
+    let randomTilt = (Math.random() * 6 - 3).toFixed(2); // -3deg to +3deg
+    card.style.setProperty('--tilt', `${randomTilt}deg`);
+});
