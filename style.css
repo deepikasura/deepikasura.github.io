@@ -1,485 +1,95 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #E7C2CB;
-    color: #A3472D;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
-}
-
-/* Loader */
-
-#loader {
-    position: fixed;
-    inset: 0;
-    background: #E7C2CB;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: .8s;
-}
-
-#loader h1 {
-    font-size: 3rem;
-    letter-spacing: 6px;
-}
-
-#loader p {
-    margin-top: 15px;
-    opacity: .7;
-}
-
-/* Hero */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    letter-spacing: 5px;
-}
-
-.hero p {
-    margin-top: 25px;
-    line-height: 2;
-    font-size: 1.1rem;
-}
-
-.scroll {
-    margin-top: 60px;
-    opacity: .7;
-}
-
-/* Quote */
-
-.quote {
-    text-align: center;
-    padding: 90px 25px;
-    font-size: 1.4rem;
-    font-style: italic;
-    line-height: 1.8;
-}
-
-/* Gallery */
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
-    padding: 60px 20px;
-}
-
-.photo-card {
-    background: #F2DEE3;
-    border-radius: 25px;
-    padding: 18px;
-    width: 300px;
-    box-shadow: 0 12px 30px rgba(80, 40, 40, .18);
-    transition: .35s;
-}
-
-.photo-card:hover {
-    transform: translateY(-10px);
-}
-
-.photo-card img {
-    width: 100%;
-    border-radius: 18px;
-}
-
-.photo-card p {
-    text-align: center;
-    margin-top: 15px;
-    color: #8B3E2F;
-}
-
-/* Music */
-
-.music {
-    text-align: center;
-    padding: 90px 20px;
-}
-
-.music h2 {
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.music p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
-
-audio {
-    width: 280px;
-}
-
-/* Footer */
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #8B3E2F;
-    opacity: .85;
-}
-
-.footer-line {
-    margin-top: 70px;
-    text-align: center;
-    font-style: italic;
-    opacity: 0.9;
-    font-size: 1rem;
-}
-
-.music-note {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    font-size: 0.9rem;
-    opacity: 0.75;
-    font-style: italic;
-}
-
-/* Mobile */
-
-@media (max-width:700px) {
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .quote {
-        font-size: 1.1rem;
-    }
-
-    .photo-card {
-        width: 90%;
-    }
-
-    .footer-line {
-        font-size: .95rem;
-    }
-
-    .music-note {
-        font-size: .8rem;
-    }
-
-}
-/* Dreamy Quote */
-
-.dreamy{
-    animation: fadeDream 2.5s ease;
-}
-
-.quote-text{
-    font-size:1.7rem;
-    line-height:2;
-    text-align:center;
-    font-style:italic;
-    color:#8B3E2F;
-    text-shadow:0 0 18px rgba(255,255,255,.35);
-    animation: float 5s ease-in-out infinite;
-}
-
-.footer-line{
-    margin-top:65px;
-    text-align:center;
-    font-style:italic;
-    font-size:1rem;
-    opacity:.9;
-    letter-spacing:.5px;
-}
-
-.music-note{
-    margin-top:22px;
-    text-align:center;
-    font-size:.9rem;
-    opacity:.7;
-    font-style:italic;
-}
-
-.photo-card{
-    animation:fadeUp .9s ease both;
-}
-
-.photo-card:nth-child(2){animation-delay:.15s;}
-.photo-card:nth-child(3){animation-delay:.3s;}
-.photo-card:nth-child(4){animation-delay:.45s;}
-.photo-card:nth-child(5){animation-delay:.6s;}
-
-@keyframes fadeDream{
-    from{
-        opacity:0;
-        transform:translateY(35px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes float{
-    0%,100%{
-        transform:translateY(0px);
-    }
-    50%{
-        transform:translateY(-8px);
-    }
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-/* ===========================
-   DREAMY EFFECTS
-=========================== */
-
-/* Floating sparkles */
-
-.sparkles{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:-1;
-}
-
-.sparkles span{
-    position:absolute;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:rgba(255,255,255,.55);
-    animation:floatSparkle linear infinite;
-    box-shadow:0 0 12px rgba(255,255,255,.7);
-}
-
-.sparkles span:nth-child(1){left:8%;animation-duration:18s;animation-delay:0s;}
-.sparkles span:nth-child(2){left:18%;animation-duration:22s;animation-delay:3s;}
-.sparkles span:nth-child(3){left:28%;animation-duration:20s;animation-delay:6s;}
-.sparkles span:nth-child(4){left:40%;animation-duration:25s;animation-delay:2s;}
-.sparkles span:nth-child(5){left:52%;animation-duration:19s;animation-delay:5s;}
-.sparkles span:nth-child(6){left:65%;animation-duration:24s;animation-delay:7s;}
-.sparkles span:nth-child(7){left:74%;animation-duration:21s;animation-delay:4s;}
-.sparkles span:nth-child(8){left:84%;animation-duration:18s;animation-delay:8s;}
-.sparkles span:nth-child(9){left:92%;animation-duration:23s;animation-delay:1s;}
-.sparkles span:nth-child(10){left:97%;animation-duration:20s;animation-delay:6s;}
-
-@keyframes floatSparkle{
-    from{
-        transform:translateY(110vh) scale(.5);
-        opacity:0;
-    }
-
-    20%{
-        opacity:.8;
-    }
-
-    80%{
-        opacity:.8;
-    }
-
-    to{
-        transform:translateY(-15vh) scale(1.4);
-        opacity:0;
-    }
-}
-
-/* Soft glowing title */
-
-.hero h1{
-    animation:glow 4s ease-in-out infinite;
-}
-
-@keyframes glow{
-
-    0%,100%{
-        text-shadow:0 0 10px rgba(255,255,255,.2);
-    }
-
-    50%{
-        text-shadow:
-        0 0 18px rgba(255,255,255,.55),
-        0 0 35px rgba(255,255,255,.3);
-    }
-
-}
-
-/* Better photo hover */
-
-.photo-card{
-    transition:.4s ease;
-}
-
-.photo-card:hover{
-
-    transform:translateY(-10px) scale(1.03);
-
-    box-shadow:
-    0 20px 45px rgba(80,40,40,.18),
-    0 0 30px rgba(255,255,255,.35);
-
-}
-
-/* Soft fade for entire page */
-
-body{
-
-    animation:pageFade 1.4s ease;
-
-}
-
-@keyframes pageFade{
-
-    from{
-
-        opacity:0;
-
-    }
-
-    to{
-
-        opacity:1;
-
-    }
-
-}
-
-/* Romantic selection colour */
-
-::selection{
-
-    background:#d99cab;
-    color:white;
-
-}
-
-/* Nicer scrollbar */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#edd0d8;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#b66d7d;
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#a85c6d;
-
-}
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 40px;
-}
-
-.photo-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-.photo-card:hover {
-    transform: translateY(-8px) scale(1.02);
-}
-
-.photo-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
-.photo-card p {
-    padding: 10px;
-    font-size: 14px;
-    text-align: center;
-}
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #0f0f1a, #1c1c2e);
-    color: white;
-}
-
-.gallery {
-    max-width: 1200px;
-    margin: auto;
-}
-.photo-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.photo-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-.photo-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
-}
-.photo-card img {
-    transition: transform 0.4s ease;
-}
-
-.photo-card:hover img {
-    transform: scale(1.08);
-}
-.photo-card {
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.hero h1 {
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-::selection {
-    background: rgba(255, 255, 255, 0.2);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deeps.core</title>
+    <!-- Combined Google Font connection optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <h1>deeps.core</h1>
+        <p>loading memories...</p>
+    </div>
+
+    <section class="hero">
+        <h1>deeps.core</h1>
+        <p>For the ones who romanticise everything...</p>
+        <div class="scroll">↓ wander a little ↓</div>
+    </section>
+
+    <section class="quote">
+        <div class="dreamy">
+            <p class="quote-text">
+                Some moments are too gentle to stay in our hands,<br> so we let them live here.
+            </p>
+            <p class="footer-line">and your bugs be tiny enough to hide under a semicolon.</p>
+            <p class="music-note">(make sure to click anywhere on the page for music to start playing)</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="photo-card"><img src="Photos/photo1.webp" alt="The Balcony"><p>The Balcony.</p></div>
+        <div class="photo-card"><img src="Photos/photo2.jpg" alt="The fav Wall"><p>The fav Wall.</p></div>
+        <div class="photo-card"><img src="Photos/photo5.jpg" alt="The smile"><p>The smile.</p></div>
+        <div class="photo-card"><img src="Photos/img12.jpg" alt="The terrace"><p>The terrace.</p></div>
+        <div class="photo-card"><img src="Photos/img124.jpg" alt="The urge to fly away"><p>The urge to fly away.</p></div>
+        <div class="photo-card"><img src="Photos/123.jpg" alt="The traditional"><p>The traditional.</p></div>
+        <div class="photo-card"><img src="Photos/456.jpg" alt="A Movie scene"><p>A Movie scene...</p></div>
+        <div class="photo-card"><img src="Photos/B.jpg" alt="Innocent"><p>Innocent ig...?</p></div>
+        <div class="photo-card"><img src="Photos/C.jpg" alt="Moon light"><p>I could be a moon...</p></div>
+        <div class="photo-card"><img src="Photos/D.jpg" alt="Frock pose"><p>The aka 'frock pose'.</p></div>
+        <div class="photo-card"><img src="Photos/E.jpg" alt="Goa Pizza Hut"><p>Goa's Pizzahut.</p></div>
+        <div class="photo-card"><img src="Photos/F.jpg" alt="Goggles"><p>The googles...</p></div>
+        <div class="photo-card"><img src="Photos/G.jpg" alt="Amma lap"><p>Amma's lap.</p></div>
+        <div class="photo-card"><img src="Photos/H.jpg" alt="Pravin Kaka lap"><p>Pravin Kaka's lap...</p></div>
+        <div class="photo-card"><img src="Photos/I.jpg" alt="Goa Temple"><p>A temple in goa...</p></div>
+        <div class="photo-card"><img src="Photos/J.jpg" alt="School birthday"><p>The first birthday in school...</p></div>
+        <div class="photo-card"><img src="Photos/K.jpg" alt="Washing dishes"><p>Washed dishes for the first time ig...</p></div>
+        <div class="photo-card"><img src="Photos/L.jpg" alt="Goa birthday"><p>The first birthday in Goa...(ADT)</p></div>
+        <div class="photo-card"><img src="Photos/M.jpg" alt="Amma favorite"><p>Amma's fav pic...</p></div>
+        <div class="photo-card"><img src="Photos/N.jpg" alt="Ajji"><p>Ajji...</p></div>
+        <div class="photo-card"><img src="Photos/O.jpg" alt="6 months"><p>6 months...</p></div>
+        <div class="photo-card"><img src="Photos/P.jpg" alt="6 months alternate"><p>Same day - '6 months'.Different dress.</p></div>
+        <div class="photo-card"><img src="Photos/Q.jpg" alt="Floor playing"><p>Ohh I Loved playing on floor...</p></div>
+        <div class="photo-card"><img src="Photos/R.jpg" alt="Ganji Chudail"><p>Probably Ganji Chudail...</p></div>
+        <div class="photo-card"><img src="Photos/S.jpg" alt="Ajji Me Ona"><p>.'Ajji-Me-Ona'.</p></div>
+        <div class="photo-card"><img src="Photos/U.jpg" alt="Arjun Reddy"><p>The Arjun Reddy of the house.</p></div>
+        <div class="photo-card"><img src="Photos/V.jpg" alt="Smile icon"><p>:)</p></div>
+        <div class="photo-card"><img src="Photos/w.jpg" alt="Favorite"><p>My fav pic!</p></div>
+        <div class="photo-card"><img src="Photos/X.jpg" alt="7 seconds"><p>My 1 sec out of the 7.</p></div>
+        <div class="photo-card"><img src="Photos/Y.jpg" alt="New versions"><p>The begining of the new versions...?</p></div>
+        <div class="photo-card"><img src="Photos/Z.jpg" alt="Sun light"><p>I could also be the Sun...</p></div>
+    </section>
+
+    <section class="music">
+        <h2>Now playing...</h2>
+        <p>Maname • Sarah Black 🎧</p>
+    </section>
+
+    <footer>made with love, memories & quiet moments ♡</footer>
+
+    <!-- Sparkles safely nested back inside body context -->
+    <div class="sparkles">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="music/Gaana.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+    <script>
+        const music = document.getElementById("bgMusic");
+        document.addEventListener("click", function () {
+            music.play().catch(error => console.log("Playback interaction error:", error));
+        }, { once: true });
+    </script>
+</body>
+</html>
