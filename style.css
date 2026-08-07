@@ -1,275 +1,112 @@
-<!DOCTYPE html>
-<html>
+/* 🌆 RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* 🌙 BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b0f0f, #4a1c1c, #1a0d0d);
+    color: #f5e6e0;
+    overflow-x: hidden;
+}
 
-    <title>deeps.core</title>
+/* ✨ LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #1a0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+#loader h1 {
+    color: #e8b4a0;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+#loader p {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.7;
+}
 
-<body>
+/* 🌟 SECTIONS */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
 
-<div id="loader">
-    <h1>deeps.core</h1>
-    <p>loading memories...</p>
-</div>
+/* 🌠 HERO */
+.hero h1 {
+    font-size: 50px;
+    color: #e8b4a0;
+}
 
-<section class="hero">
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #d6a39a;
+}
 
-    <h1>deeps.core</h1>
+.scroll {
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.7;
+}
 
-    <p>
-        For the ones who romanticise everything...
-    </p>
+/* 💭 QUOTE */
+.dreamy {
+    max-width: 700px;
+    margin: auto;
+}
 
-    <div class="scroll">
-    ↓ wander a little ↓
-</div>
+.quote-text {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #f1d4c9;
+}
 
-</section>
+.footer-line {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #c89b8f;
+}
 
-<section class="quote">
+.music-note {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.6;
+}
 
-    <div class="dreamy">
-        <p class="quote-text">
-            Some moments are too gentle to stay in our hands,<br>
-            so we let them live here.
-        </p>
-
-        <p class="footer-line">
-            and your bugs be tiny enough to hide under a semicolon.
-        </p>
-
-        <p class="music-note">
-            (make sure to click anywhere on the page for music to start playing)
-        </p>
-    </div>
-
-</section>
-
-<section class="gallery">
-
-    <div class="photo-card">
-        <img src="Photos/photo1.webp">
-        <p>The Balcony.</p>
-    </div>
-
-    <div class="photo-card">
-        <img src="Photos/photo2.jpg">
-        <p>The fav Wall.</p>
-    </div>
-
-    <div class="photo-card">
-        <img src="Photos/photo5.jpg">
-        <p>The smile.</p>
-    </div>
-
-    <div class="photo-card">
-        <img src="Photos/img12.jpg">
-        <p>The terrace.</p>
-    </div>
-
-    <div class="photo-card">
-        <img src="Photos/img124.jpg">
-        <p>The urge to fly away.</p>
-    </div>
-
-    <div class="photo-card">
-<img src="Photos/123.jpg">
-<p>The traditional.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/456.jpg">
-<p>A Movie scene...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/B.jpg">
-<p>Innocent ig...?</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/C.jpg">
-<p>I could be a moon...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/D.jpg">
-<p>The aka 'frock pose'.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/E.jpg">
-<p>Goa's Pizzahut.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/F.jpg">
-<p>The googles...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/G.jpg">
-<p>Amma's lap.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/H.jpg">
-<p>Pravin Kaka's lap...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/I.jpg">
-<p>A temple in goa...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/J.jpg">
-<p>The first birthday in school...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/K.jpg">
-<p>Washed dishes for the first time ig...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/L.jpg">
-<p>The first birthday in Goa...(ADT)</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/M.jpg">
-<p>Amma's fav pic...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/N.jpg">
-<p>Ajji...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/O.jpg">
-<p>6 months...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/P.jpg">
-<p>Same day - '6 months'.Different dress.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/Q.jpg">
-<p>Ohh I Loved playing on floor...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/R.jpg">
-<p>Probably Ganji Chudail...</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/S.jpg">
-<p>.'Ajji-Me-Ona'.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/U.jpg">
-<p>The Arjun Reddy of the house.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/V.jpg">
-<p>:)</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/w.jpg">
-<p>My fav pic!</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/X.jpg">
-<p>My 1 sec out of the 7.</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/Y.jpg">
-<p>The begining of the new versions...?</p>
-</div>
-
-<div class="photo-card">
-<img src="Photos/Z.jpg">
-<p>I could also be the Sun...</p>
-</div>
-
-
-</section>
-
-<section class="music">
-
-    <h2>Now playing...</h2>
-
-    <p>
-        Maname • Sarah Black 🎧
-    </p>
-
-</section>
-
-<footer>
-   made with love, memories & quiet moments ♡ 
-</footer>
-    <div class="sparkles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
-<audio id="bgMusic" loop>
-    <source src="music/Gaana.mp3" type="audio/mpeg">
-</audio>
-
-<script src="script.js"></script>
-
-<script>
-const music = document.getElementById("bgMusic");
-
-document.addEventListener("click", function () {
-    music.play();
-}, { once: true });
-</script>
-
-</body>
+/* 🖼 GALLERY */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     padding: 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* 📸 PHOTO CARD */
 .photo-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     overflow: hidden;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* ✅ FIXED HOVER */
 .photo-card:hover {
     transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .photo-card img {
@@ -279,10 +116,74 @@ document.addEventListener("click", function () {
     display: block;
 }
 
+/* ✍️ POSTCARD TEXT (VISIBLE + AESTHETIC) */
 .photo-card p {
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 13px;
     text-align: center;
+    color: #ffe4dc;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
 }
 
-</html>
+/* 🎧 MUSIC */
+.music h2 {
+    font-size: 24px;
+    color: #e8b4a0;
+}
+
+.music p {
+    margin-top: 10px;
+    color: #d6a39a;
+}
+
+/* 🖤 FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #a67c73;
+}
+
+/* ✨ SPARKLES */
+.sparkles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.sparkles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: sparkle 6s linear infinite;
+}
+
+/* positions */
+.sparkles span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.sparkles span:nth-child(2) { top: 30%; left: 70%; animation-delay: 1s; }
+.sparkles span:nth-child(3) { top: 60%; left: 40%; animation-delay: 2s; }
+.sparkles span:nth-child(4) { top: 80%; left: 10%; animation-delay: 3s; }
+.sparkles span:nth-child(5) { top: 50%; left: 90%; animation-delay: 4s; }
+.sparkles span:nth-child(6) { top: 20%; left: 50%; animation-delay: 5s; }
+.sparkles span:nth-child(7) { top: 70%; left: 80%; animation-delay: 2s; }
+.sparkles span:nth-child(8) { top: 40%; left: 30%; animation-delay: 3s; }
+.sparkles span:nth-child(9) { top: 15%; left: 85%; animation-delay: 1s; }
+.sparkles span:nth-child(10){ top: 75%; left: 60%; animation-delay: 4s; }
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(0); }
+}
+
+/* ✨ TEXT SELECTION */
+::selection {
+    background: rgba(232, 180, 160, 0.3);
+}
