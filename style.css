@@ -1,95 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deeps.core</title>
-    <!-- Combined Google Font connection optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ===== Light Burgundy + Rust Theme (Restored) ===== */
 
-    <div id="loader">
-        <h1>deeps.core</h1>
-        <p>loading memories...</p>
-    </div>
+body {
+    background-color: #f6e9ec;
+    font-family: 'Poppins', sans-serif;
+    color: #8b3a3a;
+    margin: 0;
+    padding: 0;
+}
 
-    <section class="hero">
-        <h1>deeps.core</h1>
-        <p>For the ones who romanticise everything...</p>
-        <div class="scroll">↓ wander a little ↓</div>
-    </section>
+/* Headings */
+h1, h2, h3 {
+    color: #8b3a3a;
+    font-weight: 600;
+}
 
-    <section class="quote">
-        <div class="dreamy">
-            <p class="quote-text">
-                Some moments are too gentle to stay in our hands,<br> so we let them live here.
-            </p>
-            <p class="footer-line">and your bugs be tiny enough to hide under a semicolon.</p>
-            <p class="music-note">(make sure to click anywhere on the page for music to start playing)</p>
-        </div>
-    </section>
+/* Paragraphs */
+p {
+    color: #b55239;
+    line-height: 1.6;
+}
 
-    <section class="gallery">
-        <div class="photo-card"><img src="Photos/photo1.webp" alt="The Balcony"><p>The Balcony.</p></div>
-        <div class="photo-card"><img src="Photos/photo2.jpg" alt="The fav Wall"><p>The fav Wall.</p></div>
-        <div class="photo-card"><img src="Photos/photo5.jpg" alt="The smile"><p>The smile.</p></div>
-        <div class="photo-card"><img src="Photos/img12.jpg" alt="The terrace"><p>The terrace.</p></div>
-        <div class="photo-card"><img src="Photos/img124.jpg" alt="The urge to fly away"><p>The urge to fly away.</p></div>
-        <div class="photo-card"><img src="Photos/123.jpg" alt="The traditional"><p>The traditional.</p></div>
-        <div class="photo-card"><img src="Photos/456.jpg" alt="A Movie scene"><p>A Movie scene...</p></div>
-        <div class="photo-card"><img src="Photos/B.jpg" alt="Innocent"><p>Innocent ig...?</p></div>
-        <div class="photo-card"><img src="Photos/C.jpg" alt="Moon light"><p>I could be a moon...</p></div>
-        <div class="photo-card"><img src="Photos/D.jpg" alt="Frock pose"><p>The aka 'frock pose'.</p></div>
-        <div class="photo-card"><img src="Photos/E.jpg" alt="Goa Pizza Hut"><p>Goa's Pizzahut.</p></div>
-        <div class="photo-card"><img src="Photos/F.jpg" alt="Goggles"><p>The googles...</p></div>
-        <div class="photo-card"><img src="Photos/G.jpg" alt="Amma lap"><p>Amma's lap.</p></div>
-        <div class="photo-card"><img src="Photos/H.jpg" alt="Pravin Kaka lap"><p>Pravin Kaka's lap...</p></div>
-        <div class="photo-card"><img src="Photos/I.jpg" alt="Goa Temple"><p>A temple in goa...</p></div>
-        <div class="photo-card"><img src="Photos/J.jpg" alt="School birthday"><p>The first birthday in school...</p></div>
-        <div class="photo-card"><img src="Photos/K.jpg" alt="Washing dishes"><p>Washed dishes for the first time ig...</p></div>
-        <div class="photo-card"><img src="Photos/L.jpg" alt="Goa birthday"><p>The first birthday in Goa...(ADT)</p></div>
-        <div class="photo-card"><img src="Photos/M.jpg" alt="Amma favorite"><p>Amma's fav pic...</p></div>
-        <div class="photo-card"><img src="Photos/N.jpg" alt="Ajji"><p>Ajji...</p></div>
-        <div class="photo-card"><img src="Photos/O.jpg" alt="6 months"><p>6 months...</p></div>
-        <div class="photo-card"><img src="Photos/P.jpg" alt="6 months alternate"><p>Same day - '6 months'.Different dress.</p></div>
-        <div class="photo-card"><img src="Photos/Q.jpg" alt="Floor playing"><p>Ohh I Loved playing on floor...</p></div>
-        <div class="photo-card"><img src="Photos/R.jpg" alt="Ganji Chudail"><p>Probably Ganji Chudail...</p></div>
-        <div class="photo-card"><img src="Photos/S.jpg" alt="Ajji Me Ona"><p>.'Ajji-Me-Ona'.</p></div>
-        <div class="photo-card"><img src="Photos/U.jpg" alt="Arjun Reddy"><p>The Arjun Reddy of the house.</p></div>
-        <div class="photo-card"><img src="Photos/V.jpg" alt="Smile icon"><p>:)</p></div>
-        <div class="photo-card"><img src="Photos/w.jpg" alt="Favorite"><p>My fav pic!</p></div>
-        <div class="photo-card"><img src="Photos/X.jpg" alt="7 seconds"><p>My 1 sec out of the 7.</p></div>
-        <div class="photo-card"><img src="Photos/Y.jpg" alt="New versions"><p>The begining of the new versions...?</p></div>
-        <div class="photo-card"><img src="Photos/Z.jpg" alt="Sun light"><p>I could also be the Sun...</p></div>
-    </section>
+/* Links */
+a {
+    color: #b55239;
+    text-decoration: none;
+}
 
-    <section class="music">
-        <h2>Now playing...</h2>
-        <p>Maname • Sarah Black 🎧</p>
-    </section>
+a:hover {
+    color: #8b3a3a;
+}
 
-    <footer>made with love, memories & quiet moments ♡</footer>
+/* Photo Card Layout */
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-    <!-- Sparkles safely nested back inside body context -->
-    <div class="sparkles">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-    </div>
+/* Polaroid Card Style */
+.card {
+    background: #fff8f5;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(139, 58, 58, 0.15);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
 
-    <audio id="bgMusic" loop>
-        <source src="music/Gaana.mp3" type="audio/mpeg">
-    </audio>
+/* Polaroid Tilt Effect */
+.card:nth-child(odd) {
+    transform: rotate(-3deg);
+}
 
-    <script src="script.js"></script>
-    <script>
-        const music = document.getElementById("bgMusic");
-        document.addEventListener("click", function () {
-            music.play().catch(error => console.log("Playback interaction error:", error));
-        }, { once: true });
-    </script>
-</body>
-</html>
+.card:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+/* Images inside card */
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Caption */
+.card p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    background: #8b3a3a;
+    color: #fff8f5;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b55239;
+}
