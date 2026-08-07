@@ -1,89 +1,288 @@
-/* ===== Light Burgundy + Rust Theme (Restored) ===== */
+<!DOCTYPE html>
+<html>
 
-body {
-    background-color: #f6e9ec;
-    font-family: 'Poppins', sans-serif;
-    color: #8b3a3a;
-    margin: 0;
-    padding: 0;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Headings */
-h1, h2, h3 {
-    color: #8b3a3a;
-    font-weight: 600;
-}
+    <title>deeps.core</title>
 
-/* Paragraphs */
-p {
-    color: #b55239;
-    line-height: 1.6;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-/* Links */
-a {
-    color: #b55239;
-    text-decoration: none;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-a:hover {
-    color: #8b3a3a;
-}
+<body>
 
-/* Photo Card Layout */
-.photo-container {
-    display: flex;
-    flex-wrap: wrap;
+<div id="loader">
+    <h1>deeps.core</h1>
+    <p>loading memories...</p>
+</div>
+
+<section class="hero">
+
+    <h1>deeps.core</h1>
+
+    <p>
+        For the ones who romanticise everything...
+    </p>
+
+    <div class="scroll">
+    ↓ wander a little ↓
+</div>
+
+</section>
+
+<section class="quote">
+
+    <div class="dreamy">
+        <p class="quote-text">
+            Some moments are too gentle to stay in our hands,<br>
+            so we let them live here.
+        </p>
+
+        <p class="footer-line">
+            and your bugs be tiny enough to hide under a semicolon.
+        </p>
+
+        <p class="music-note">
+            (make sure to click anywhere on the page for music to start playing)
+        </p>
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <div class="photo-card">
+        <img src="Photos/photo1.webp">
+        <p>The Balcony.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="Photos/photo2.jpg">
+        <p>The fav Wall.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="Photos/photo5.jpg">
+        <p>The smile.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="Photos/img12.jpg">
+        <p>The terrace.</p>
+    </div>
+
+    <div class="photo-card">
+        <img src="Photos/img124.jpg">
+        <p>The urge to fly away.</p>
+    </div>
+
+    <div class="photo-card">
+<img src="Photos/123.jpg">
+<p>The traditional.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/456.jpg">
+<p>A Movie scene...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/B.jpg">
+<p>Innocent ig...?</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/C.jpg">
+<p>I could be a moon...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/D.jpg">
+<p>The aka 'frock pose'.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/E.jpg">
+<p>Goa's Pizzahut.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/F.jpg">
+<p>The googles...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/G.jpg">
+<p>Amma's lap.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/H.jpg">
+<p>Pravin Kaka's lap...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/I.jpg">
+<p>A temple in goa...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/J.jpg">
+<p>The first birthday in school...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/K.jpg">
+<p>Washed dishes for the first time ig...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/L.jpg">
+<p>The first birthday in Goa...(ADT)</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/M.jpg">
+<p>Amma's fav pic...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/N.jpg">
+<p>Ajji...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/O.jpg">
+<p>6 months...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/P.jpg">
+<p>Same day - '6 months'.Different dress.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/Q.jpg">
+<p>Ohh I Loved playing on floor...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/R.jpg">
+<p>Probably Ganji Chudail...</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/S.jpg">
+<p>.'Ajji-Me-Ona'.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/U.jpg">
+<p>The Arjun Reddy of the house.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/V.jpg">
+<p>:)</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/w.jpg">
+<p>My fav pic!</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/X.jpg">
+<p>My 1 sec out of the 7.</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/Y.jpg">
+<p>The begining of the new versions...?</p>
+</div>
+
+<div class="photo-card">
+<img src="Photos/Z.jpg">
+<p>I could also be the Sun...</p>
+</div>
+
+
+</section>
+
+<section class="music">
+
+    <h2>Now playing...</h2>
+
+    <p>
+        Maname • Sarah Black 🎧
+    </p>
+
+</section>
+
+<footer>
+   made with love, memories & quiet moments ♡ 
+</footer>
+    <div class="sparkles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="music/Gaana.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function () {
+    music.play();
+}, { once: true });
+</script>
+
+</body>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    justify-content: center;
+    padding: 40px;
 }
 
-/* Polaroid Card Style */
-.card {
-    background: #fff8f5;
-    padding: 12px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(139, 58, 58, 0.15);
-    width: 200px;
-    text-align: center;
+.photo-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
     transition: transform 0.3s ease;
 }
 
-/* Polaroid Tilt Effect */
-.card:nth-child(odd) {
-    transform: rotate(-3deg);
+.photo-card:hover {
+    transform: translateY(-8px) scale(1.02);
 }
 
-.card:nth-child(even) {
-    transform: rotate(3deg);
-}
-
-.card:hover {
-    transform: scale(1.05) rotate(0deg);
-}
-
-/* Images inside card */
-.card img {
+.photo-card img {
     width: 100%;
-    border-radius: 8px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
-/* Caption */
-.card p {
-    margin-top: 8px;
+.photo-card p {
+    padding: 10px;
     font-size: 14px;
+    text-align: center;
 }
 
-/* Buttons */
-button {
-    background: #8b3a3a;
-    color: #fff8f5;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #b55239;
-}
+</html>
