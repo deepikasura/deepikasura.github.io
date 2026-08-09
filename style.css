@@ -1,197 +1,529 @@
-html {
-    scroll-behavior: smooth;
-}
+/* =========================================
+   DEEPS.CORE
+   ========================================= */
 
-body {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-/* 🌆 RESET */
+
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 🌙 BODY */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #2b0f0f, #4a1c1c, #1a0d0d);
-    color: #f5e6e0;
-    overflow-x: hidden;
+
+/* SMOOTH SCROLL FALLBACK */
+
+html {
+    scroll-behavior: smooth;
 }
 
-/* ✨ LOADER */
+
+/* BODY */
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #2b0f0f,
+        #4a1c1c,
+        #1a0d0d
+    );
+
+    color: #f5e6e0;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================
+   LOADER
+   ========================================= */
+
 #loader {
     position: fixed;
+
+    inset: 0;
+
     width: 100%;
     height: 100%;
+
     background: #1a0d0d;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     flex-direction: column;
+
     z-index: 9999;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
 }
+
 
 #loader h1 {
     color: #e8b4a0;
 }
 
+
 #loader p {
     margin-top: 10px;
+
     font-size: 14px;
+
     opacity: 0.7;
 }
 
-/* 🌟 SECTIONS */
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
 section {
     padding: 80px 20px;
+
     text-align: center;
+
+    will-change: opacity, transform;
 }
 
-/* 🌠 HERO */
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
 .hero h1 {
-    font-size: 50px;
+    font-size: clamp(45px, 8vw, 80px);
+
     color: #e8b4a0;
 }
+
 
 .hero p {
     margin-top: 10px;
+
     font-size: 18px;
+
     color: #d6a39a;
 }
+
 
 .scroll {
     margin-top: 30px;
+
     font-size: 14px;
+
     opacity: 0.7;
+
+    animation: floating 2.5s ease-in-out infinite;
 }
 
-/* 💭 QUOTE */
+
+/* =========================================
+   QUOTE
+   ========================================= */
+
 .dreamy {
     max-width: 700px;
+
     margin: auto;
 }
+
 
 .quote-text {
     font-size: 22px;
+
     line-height: 1.6;
+
     color: #f1d4c9;
 }
 
+
 .footer-line {
     margin-top: 15px;
+
     font-size: 14px;
+
     color: #c89b8f;
 }
 
+
 .music-note {
     margin-top: 10px;
+
     font-size: 12px;
+
     opacity: 0.6;
 }
 
-/* 🖼 GALLERY */
+
+/* =========================================
+   GALLERY
+   ========================================= */
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 20px;
+
     padding: 40px;
+
     max-width: 1200px;
+
     margin: auto;
 }
 
-/* 📸 PHOTO CARD */
+
+/* =========================================
+   PHOTO CARD
+   ========================================= */
+
 .photo-card {
     background: rgba(255, 255, 255, 0.05);
+
     border-radius: 16px;
+
     overflow: hidden;
+
     backdrop-filter: blur(8px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    -webkit-backdrop-filter: blur(8px);
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 1s ease,
+        transform 0.8s ease,
+        box-shadow 0.3s ease;
 }
 
-/* ✅ FIXED HOVER */
+
+/* PHOTO CARD SHOW */
+
+.photo-card.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* HOVER */
+
 .photo-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
 }
+
+
+/* PHOTO */
 
 .photo-card img {
     width: 100%;
+
     height: 250px;
+
     object-fit: cover;
+
     display: block;
+
+    /*
+       Prevents image rendering
+       from creating unnecessary
+       layout movement.
+    */
+
+    backface-visibility: hidden;
 }
 
-/* ✍️ POSTCARD TEXT (VISIBLE + AESTHETIC) */
+
+/* CAPTION */
+
 .photo-card p {
     padding: 12px;
+
     font-size: 13px;
+
     text-align: center;
+
     color: #ffe4dc;
+
     font-style: italic;
+
     letter-spacing: 0.5px;
+
     opacity: 0.9;
 }
 
-/* 🎧 MUSIC */
+
+/* =========================================
+   MUSIC
+   ========================================= */
+
 .music h2 {
     font-size: 24px;
+
     color: #e8b4a0;
 }
 
+
 .music p {
     margin-top: 10px;
+
     color: #d6a39a;
 }
 
-/* 🖤 FOOTER */
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
 footer {
     text-align: center;
+
     padding: 30px;
+
     font-size: 14px;
+
     color: #a67c73;
 }
 
-/* ✨ SPARKLES */
+
+/* =========================================
+   SPARKLES
+   ========================================= */
+
 .sparkles {
     position: fixed;
+
     width: 100%;
     height: 100%;
+
     pointer-events: none;
+
     top: 0;
     left: 0;
+
+    z-index: 10;
 }
+
 
 .sparkles span {
     position: absolute;
+
     width: 4px;
     height: 4px;
+
     background: rgba(255, 255, 255, 0.5);
+
     border-radius: 50%;
+
     animation: sparkle 6s linear infinite;
 }
 
-/* positions */
-.sparkles span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.sparkles span:nth-child(2) { top: 30%; left: 70%; animation-delay: 1s; }
-.sparkles span:nth-child(3) { top: 60%; left: 40%; animation-delay: 2s; }
-.sparkles span:nth-child(4) { top: 80%; left: 10%; animation-delay: 3s; }
-.sparkles span:nth-child(5) { top: 50%; left: 90%; animation-delay: 4s; }
-.sparkles span:nth-child(6) { top: 20%; left: 50%; animation-delay: 5s; }
-.sparkles span:nth-child(7) { top: 70%; left: 80%; animation-delay: 2s; }
-.sparkles span:nth-child(8) { top: 40%; left: 30%; animation-delay: 3s; }
-.sparkles span:nth-child(9) { top: 15%; left: 85%; animation-delay: 1s; }
-.sparkles span:nth-child(10){ top: 75%; left: 60%; animation-delay: 4s; }
 
-@keyframes sparkle {
-    0% { opacity: 0; transform: scale(0); }
-    50% { opacity: 1; transform: scale(1.5); }
-    100% { opacity: 0; transform: scale(0); }
+/* SPARKLE POSITIONS */
+
+.sparkles span:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
 }
 
-/* ✨ TEXT SELECTION */
+.sparkles span:nth-child(2) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.sparkles span:nth-child(3) {
+    top: 60%;
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.sparkles span:nth-child(4) {
+    top: 80%;
+    left: 10%;
+    animation-delay: 3s;
+}
+
+.sparkles span:nth-child(5) {
+    top: 50%;
+    left: 90%;
+    animation-delay: 4s;
+}
+
+.sparkles span:nth-child(6) {
+    top: 20%;
+    left: 50%;
+    animation-delay: 5s;
+}
+
+.sparkles span:nth-child(7) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.sparkles span:nth-child(8) {
+    top: 40%;
+    left: 30%;
+    animation-delay: 3s;
+}
+
+.sparkles span:nth-child(9) {
+    top: 15%;
+    left: 85%;
+    animation-delay: 1s;
+}
+
+.sparkles span:nth-child(10) {
+    top: 75%;
+    left: 60%;
+    animation-delay: 4s;
+}
+
+
+/* SPARKLE ANIMATION */
+
+@keyframes sparkle {
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+}
+
+
+/* SCROLL ARROW ANIMATION */
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+
+/* TEXT SELECTION */
+
 ::selection {
     background: rgba(232, 180, 160, 0.3);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 70px 15px;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .quote-text {
+        font-size: 18px;
+    }
+
+
+    .quote-text br {
+        display: none;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        padding: 25px 18px;
+
+        gap: 25px;
+    }
+
+
+    .photo-card img {
+        height: 280px;
+    }
+
+
+    .music h2 {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCE MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
 }
