@@ -2,57 +2,32 @@
    DEEPS.CORE SCRIPT
    ========================================= */
 
-
-/* =========================================
-   LENIS SMOOTH SCROLL
-   ========================================= */
+/* SMOOTH SCROLL */
 
 let lenis;
 
 if (typeof Lenis !== "undefined") {
 
     lenis = new Lenis({
-
         duration: 1.2,
-
-        easing: (t) => {
-            return 1 - Math.pow(1 - t, 3);
-        },
-
+        easing: (t) => 1 - Math.pow(1 - t, 3),
         smoothWheel: true,
-
-        /*
-         * Keep touch scrolling native.
-         * This makes mobile scrolling feel natural.
-         */
         smoothTouch: false,
-
         wheelMultiplier: 0.9,
-
         touchMultiplier: 1,
-
         infinite: false
-
     });
 
-
     function raf(time) {
-
         lenis.raf(time);
-
         requestAnimationFrame(raf);
-
     }
 
-
     requestAnimationFrame(raf);
-
 }
 
 
-/* =========================================
-   LOADER
-   ========================================= */
+/* LOADER */
 
 window.addEventListener("load", () => {
 
@@ -63,9 +38,7 @@ window.addEventListener("load", () => {
         loader.style.opacity = "0";
 
         setTimeout(() => {
-
             loader.style.display = "none";
-
         }, 800);
 
     }
@@ -73,150 +46,89 @@ window.addEventListener("load", () => {
 });
 
 
-/* =========================================
-   SECTION SCROLL ANIMATION
-   ========================================= */
+/* SECTION SCROLL ANIMATION */
 
 const sections = document.querySelectorAll("section");
 
+const sectionObserver = new IntersectionObserver((entries) => {
 
-const sectionObserver = new IntersectionObserver(
+    entries.forEach(entry => {
 
-    (entries) => {
+        if (entry.isIntersecting) {
 
-        entries.forEach(entry => {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
 
-            if (entry.isIntersecting) {
+            sectionObserver.unobserve(entry.target);
+        }
 
-                entry.target.style.opacity = "1";
+    });
 
-                entry.target.style.transform =
-                    "translateY(0)";
-
-                sectionObserver.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.08,
-
-        rootMargin: "0px 0px -40px 0px"
-    }
-
-);
+}, {
+    threshold: 0.05
+});
 
 
 sections.forEach(section => {
 
     section.style.opacity = "0";
-
-    section.style.transform =
-        "translateY(30px)";
-
-    section.style.transition =
-        "opacity 1s ease, transform 1s ease";
+    section.style.transform = "translateY(30px)";
+    section.style.transition = "opacity 1s ease, transform 1s ease";
 
     sectionObserver.observe(section);
 
 });
 
 
-/* =========================================
-   PHOTO CARD ANIMATION
-   ========================================= */
+/* PHOTO CARD ANIMATION */
 
-const cards =
-    document.querySelectorAll(".photo-card");
+const cards = document.querySelectorAll(".photo-card");
 
+const cardObserver = new IntersectionObserver((entries) => {
 
-const cardObserver = new IntersectionObserver(
+    entries.forEach(entry => {
 
-    (entries) => {
+        if (entry.isIntersecting) {
 
-        entries.forEach(entry => {
+            entry.target.classList.add("show");
 
-            if (entry.isIntersecting) {
+            cardObserver.unobserve(entry.target);
+        }
 
-                entry.target.classList.add("show");
+    });
 
-                cardObserver.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.08,
-
-        rootMargin: "0px 0px -50px 0px"
-    }
-
-);
-
-
-cards.forEach(card => {
-
-    cardObserver.observe(card);
-
+}, {
+    threshold: 0.05
 });
 
 
-/* =========================================
-   MUSIC
-   ========================================= */
+cards.forEach(card => {
+    cardObserver.observe(card);
+});
 
-const music =
-    document.getElementById("bgMusic");
 
+/* MUSIC */
+
+const music = document.getElementById("bgMusic");
 
 let musicStarted = false;
 
-
 function startMusic() {
 
-    if (!music || musicStarted) {
-        return;
-    }
-
+    if (!music || musicStarted) return;
 
     music.play()
         .then(() => {
-
             musicStarted = true;
-
         })
-        .catch(() => {
-
-            /*
-             * Browser may temporarily block
-             * playback. Another interaction
-             * will try again.
-             */
-
-        });
+        .catch(() => {});
 
 }
 
+document.addEventListener("click", startMusic, {
+    passive: true
+});
 
-document.addEventListener(
-    "click",
-    startMusic,
-    {
-        passive: true
-    }
-);
-
-
-document.addEventListener(
-    "touchstart",
-    startMusic,
-    {
-        passive: true
-    }
-);
+document.addEventListener("touchstart", startMusic, {
+    passive: true
+});
